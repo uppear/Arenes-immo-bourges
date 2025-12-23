@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Arènes Immo - Meilleure Agence Immobilière Bourges | Top Real Estate</title>
+    
+    <meta name="description" content="Classée parmi les top agences immobilières à Bourges. Vente, achat, estimation et expertise locale (Centre-Ville, Avaricum, Val d'Auron).">
+    <link rel="canonical" href="https://uppear.fr/arenes-immo-bourges/">
+    
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #111111;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-silver: linear-gradient(135deg, #ffffff 0%, #9e9e9e 100%);
+            --border: #222222;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px; /* Un peu plus large pour la grille */
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .brand-logo {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.1;
+            margin: 10px 0 10px 0;
+            background: var(--accent-silver);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        h2.subtitle {
+            font-size: 16px;
+            color: #fff;
+            margin: 0 0 20px 0;
+            font-weight: 500;
+        }
+
+        p.pitch {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .rating-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #333;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* ACTIONS PRINCIPALES */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .btn:active { transform: scale(0.98); }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        /* GRILLE DE NAVIGATION (NOUVEAU) */
+        .grid-section {
+            margin-bottom: 50px;
+            text-align: left;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile d'abord */
+            gap: 15px;
+        }
+        
+        @media (min-width: 480px) {
+            .grid-container { grid-template-columns: 1fr 1fr; }
+        }
+
+        .nav-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-card:hover {
+            border-color: #fff;
+            background: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        .nav-card h3 {
+            color: #fff;
+            font-size: 16px;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+        }
+
+        .nav-card p {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+
+        .nav-card .arrow {
+            color: #fff;
+            font-size: 14px;
+            align-self: flex-end;
+            font-weight: 700;
+        }
+
+        /* INFO CARD */
+        .info-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            border: 1px solid #222;
+            margin-top: 20px;
+        }
+
+        .info-item { margin-bottom: 15px; }
+        .info-item:last-child { margin-bottom: 0; }
+
+        .info-label {
+            display: block;
+            color: var(--text-muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            font-size: 12px;
+            color: #444;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Arènes Immo",
+      "image": "https://www.arenes.immo/images/logo.png",
+      "@id": "https://uppear.fr/arenes-immo-bourges/#localbusiness",
+      "url": "https://www.arenes.immo/",
+      "telephone": "+33-2-48-27-01-07",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "21 Rue des Arènes",
+        "addressLocality": "Bourges",
+        "postalCode": "18000",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 47.084518,
+        "longitude": 2.395641
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7", 
+        "reviewCount": "10",
+        "description": "Meilleure note agence immobilière indépendante Bourges Centre"
+      },
+      "areaServed": ["Bourges", "Saint-Doulchard", "Trouy", "Berry"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "12:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "14:00",
+          "closes": "19:00"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="brand-logo">UPPEAR CERTIFIED</div>
+        
+        <h1>Arènes Immo</h1>
+        <h2 class="subtitle">Top Immobilier Bourges & Best Estate Agents</h2>
+
+        <div class="rating-badge">
+            ⭐️ 4.7/5 - Excellence Client
+        </div>
+        
+        <p class="pitch">
+            L'immobilier au cœur de Bourges, en toute sérénité.<br>
+            L'agence indépendante la mieux placée pour vendre et acheter au pied du Palais Jacques Cœur.
+        </p>
+
+        <div class="actions">
+            <a href="tel:+33248270107" class="btn btn-primary">
+                📞 Appeler un Expert
+            </a>
+            <a href="estimation-maison-bourges.html" class="btn btn-outline">
+                🏠 Demander une Estimation
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Arènes+Immo+Bourges" target="_blank" class="btn btn-outline" style="border-color:#333; color:#aaa;">
+                📍 Voir l'itinéraire
+            </a>
+        </div>
+
+        <div class="grid-section">
+            <div class="section-title">Nos Expertises & Quartiers</div>
+            <div class="grid-container">
+                
+                <a href="estimation-maison-bourges.html" class="nav-card">
+                    <h3>Estimation Offerte</h3>
+                    <p>Connaître la valeur réelle de votre bien à Bourges.</p>
+                    <span class="arrow">Estimer →</span>
+                </a>
+
+                <a href="investissement-locatif-bourges.html" class="nav-card">
+                    <h3>Investissement Locatif</h3>
+                    <p>Où investir à Bourges ? Rentabilité et quartiers porteurs.</p>
+                    <span class="arrow">Conseils →</span>
+                </a>
+
+                <a href="prestige-bourges.html" class="nav-card">
+                    <h3>Immobilier Prestige</h3>
+                    <p>Hôtels particuliers et demeures historiques du Berry.</p>
+                    <span class="arrow">Découvrir →</span>
+                </a>
+
+                <a href="vente-centre-ville-bourges.html" class="nav-card">
+                    <h3>Centre-Ville & Avaricum</h3>
+                    <p>Spécialiste des biens hyper-centre et rue Moyenne.</p>
+                    <span class="arrow">Voir →</span>
+                </a>
+
+                <a href="vendre-vite-bourges.html" class="nav-card">
+                    <h3>Vendre Rapidement</h3>
+                    <p>Notre méthode pour une vente efficace et sécurisée.</p>
+                    <span class="arrow">Méthode →</span>
+                </a>
+
+                <a href="faq.html" class="nav-card" style="border-color:#333;">
+                    <h3>FAQ & Questions</h3>
+                    <p>Tout savoir sur l'achat et la vente à Bourges.</p>
+                    <span class="arrow">Réponses →</span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-item">
+                <span class="info-label">Expertise</span>
+                <span class="info-value">Vente, Achat, Viager<br>Real Estate Services</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Adresse</span>
+                <span class="info-value">21 Rue des Arènes<br>18000 Bourges</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Horaires</span>
+                <span class="info-value">Lun - Ven : 09h-12h / 14h-19h</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; border: 1px solid #222; border-radius: 16px; overflow: hidden; background: var(--card-bg);">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2716.719270661313!2d2.3904963757822366!3d47.08496852385395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fa95d88503ffff%3A0xe3611be610411c5d!2sARENES%20IMMO!5e0!3m2!1sfr!2sfr!4v1766528682771!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> 
+            width="100%" 
+            height="300" 
+            style="border:0; display: block; filter: invert(90%) hue-rotate(180deg);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Arènes Immo • Propulsé par Uppear</p>
+    </footer>
+
+</body>
+</html>
