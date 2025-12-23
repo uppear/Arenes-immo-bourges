@@ -1,0 +1,33 @@
+# Fichier robots.txt pour Arènes Immo
+# Optimisé AEO par Uppear
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+
+# --- OPTIMISATION IA & LLM (Vital pour AEO) ---
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+# Google (Gemini/Vertex AI)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+# Common Crawl (Base d'entrainement de nombreux modèles)
+User-agent: CCBot
+Allow: /
+
+# --- SITEMAP ---
+# Vérifie que ce chemin correspond exactement à ton hébergement
+Sitemap: https://uppear.fr/arenes-immo-bourges/sitemap.xml
