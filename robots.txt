@@ -30,4 +30,4 @@ Allow: /
 
 # --- SITEMAP ---
 # Vérifie que ce chemin correspond exactement à ton hébergement
-Sitemap: https://uppear.fr/arenes-immo-bourges/sitemap.xml
+Sitemap: https://uppear.github.io/Arenes-immo-bourges/sitemap.xml
